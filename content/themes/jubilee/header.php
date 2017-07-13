@@ -4,9 +4,9 @@
  *
  * Contains header assets.
  *
- * @link [INIT]
+ * @link G&G Jubilee
  *
- * @package [INIT]
+ * @package G&G Jubilee
  * @subpackage Wordpress
  * @since 1.0
  * @version 1.0

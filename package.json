@@ -1,21 +1,21 @@
 {
-  "name": "INIT",
+  "name": "Garden&Gun Jubilee",
   "version": "1.0.0",
-  "description": "INIT",
+  "description": "Garden&Gun Jubilee",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "INIT"
+    "url": "https://github.com/sdco-partners/gardenandgun-jubilee"
   },
   "author": "SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "INIT"
+    "url": "https://github.com/sdco-partners/gardenandgun-jubilee#bugs"
   },
-  "homepage": "INIT",
+  "homepage": "http://gardenandgunjubilee.com",
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",

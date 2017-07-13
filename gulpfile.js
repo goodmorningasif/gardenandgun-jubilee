@@ -12,7 +12,7 @@ var gulp = require("gulp")
 
 
 // uri
-var uri = './content/themes/[INIT]';
+var uri = './content/themes/jubilee/';
 
 var paths = {
 	scss: uri.concat('src/sass/**/*.sass'),

@@ -69,7 +69,7 @@ define('NONCE_SALT',       'H[|Va:K{bDjH);+cS+oO-;]-fX35-S1p1kyp<v-dg@wPH76VJl7,
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'nch';
+$table_prefix  = 'jubd';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = '10.1.10.96/[INIT]';
+$local_path = '10.1.10.96/gardenandgun-jubilee';
 // $_SERVER['SERVER_NAME']
 
 
