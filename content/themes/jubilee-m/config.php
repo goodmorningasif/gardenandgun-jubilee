@@ -1,8 +1,8 @@
 <?php
 /** 
- * Index
+ * Keys
  *
- * The main template file
+ * API, Keys & Licenses for SLMGMT
  *
  * @link [INIT]
  *
@@ -12,8 +12,6 @@
  * @version 1.0
  */
 
-  get_header(); ?>
 
-<h1>Jubilee</h1>
 
-<?php get_footer();
+?>

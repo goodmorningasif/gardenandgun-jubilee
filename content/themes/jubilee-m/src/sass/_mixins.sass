@@ -1,0 +1,52 @@
+/* Media Breakpoints & Mixins */
+
+$break-xlarge: 1300px
+$break-large: 1024px
+$break-medium: 900px
+$break-small: 500px
+
+=desktop
+  @media(min-width: #{$break-xlarge})
+    @content
+
+=tablet
+  @media(min-width: #{$break-medium})
+    @content
+
+=tiny
+  @media(max-width: #{$break-small})
+    @content
+    
+
+/* Flexbox */
+
+=flex($a: flex, $b: space-between, $c: flex-start, $d: wrap)
+  display: $a
+  justify-content: $b
+  align-items: $c
+  flex-wrap: $d
+
+/* Background Image Settings */
+=img($a: no-repeat, $b: center, $c: cover)
+  background-repeat: $a
+  background-position: $b
+  background-size: $c
+
+/* Browser Detection  */
+
+=browser($browsers: Mozilla)
+  @each $browser in $browsers
+    html[data-browser*="#{$browser}"] &
+      @content
+
+
+/* Placeholder */
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

@@ -1,0 +1,5 @@
+<?php
+  /*
+  * Section =>  EXAMPLE COMPONENT
+  */
+?>
