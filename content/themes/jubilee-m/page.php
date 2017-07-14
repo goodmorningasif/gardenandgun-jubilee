@@ -1,20 +1,20 @@
 <?php 
 
-  $compiler = include('compiler.php');
-  $data = include('store.php');
+$compiler = include('compiler.php');
+$data = include('store.php');
 
-  if(have_posts()) :
-  	while(have_posts()): 
-  		the_post();
+if(have_posts()) :
+	while(have_posts()): 
+		the_post();
 
-  	  $data['page'] = array(
-  	  	'permalink' => get_permalink(),
-  	  	'title' => get_the_title(),
-  	  	'content' => get_the_content()
-  	  );
+	  $data['page'] = array(
+	  	'permalink' => get_permalink(),
+	  	'title' => get_the_title(),
+	  	'content' => get_the_content()
+	  );
 
-  endwhile;endif;
+endwhile;endif;
 
-  echo $compiler->render('page', $data);
+echo $compiler->render('page', $data);
 
 ?>

@@ -12,7 +12,7 @@ var gulp = require("gulp")
 
 
 // uri
-var uri = './content/themes/jubilee/';
+var uri = './content/themes/jubilee-m/';
 
 var paths = {
 	scss: uri.concat('src/sass/**/*.sass'),
@@ -22,7 +22,8 @@ var paths = {
 	src: uri.concat('src/js'),
 	dest: uri.concat('prod/'),
 	modJs: uri.concat('prod/scripts-min.js'),
-	modCss: uri.concat('prod/styles.css')
+	modCss: uri.concat('prod/styles.css'),
+	mustache: uri.concat('**/*.mustache'),
 }
 
 // Error Handling
@@ -68,6 +69,7 @@ gulp.task('modernizr', function() {
 gulp.task('default', function() {
 	livereload.listen();
 	gulp.watch(paths.php, livereload.reload);
+	gulp.watch(paths.mustache, livereload.reload);
 	gulp.watch(paths.scss, ['styles']);
 	gulp.watch(paths.js, ['uglify']);
 	// gulp.watch([paths.modJs, paths.modCss], ['modernizr']);

@@ -1,6 +1,6 @@
 <?php 
 
-$compile = include('compiler.php');
+$compiler = include('compiler.php');
 $data = include('store.php');
 
 if(have_posts()) :
@@ -16,5 +16,6 @@ if(have_posts()) :
 endwhile;endif;
 
 echo $compiler->render('page', $data);
+
 
 ?>

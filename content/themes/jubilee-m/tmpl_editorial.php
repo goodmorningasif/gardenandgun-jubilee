@@ -1,9 +1,25 @@
 <?php
 
+/** 
+ * Template Name: Editorial
+ *
+ */
+
+
 $compiler = include('compiler.php');
 $data = include('store.php');
 
-return $compiler->render('tmpl_editorial', $data);
+  if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+    $data['page'] = array(
+      'permalink' => get_permalink(),
+      'title' => get_the_title(),
+      'content' => get_the_content()
+    );
+
+  endwhile; endif;
+
+echo $compiler->render('tmpl_editorial', $data);
 
 
 ?>
