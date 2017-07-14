@@ -1,19 +1,27 @@
 <?php
-/** 
- * Index
- *
- * The main template file
- *
- * @link [INIT]
- *
- * @package [INIT]
- * @subpackage Wordpress
- * @since 1.0
- * @version 1.0
- */
 
-  get_header(); ?>
+$compiler = include('compiler.php');
+$data = include('store.php');
 
-<h1>Jubilee</h1>
+$data['posts'] = array();
 
-<?php get_footer();
+if ( have_posts() ) :
+
+  while ( have_posts() ) : the_post();
+
+    array_push($data['posts'], array(
+      'permalink' => get_permalink(),
+      'title' => get_the_title(),
+      'excerpt' => get_the_excerpt()
+    ));
+
+  endwhile;
+
+  $data['next_posts_link'] = get_next_posts_link('Older');
+  $data['previous_posts_link'] = get_previous_posts_link('Newer');
+
+endif;
+
+echo $compiler->render('index', $data);
+
+?>

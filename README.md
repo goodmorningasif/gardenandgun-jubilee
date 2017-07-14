@@ -1,4 +1,4 @@
-# []
+# Garden & Gun Jubilee
 Copyright 2017 SDCO Partners
 
 1. Getting Started 
@@ -24,7 +24,7 @@ Copyright 2017 SDCO Partners
 ### Folder Structer
 
 ```
-|--/[INIT]/
+|--/jubilee/
 |  |
 |  |--/assets/
 |  |

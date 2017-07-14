@@ -1,0 +1,15 @@
+{
+    "name": "sdco1/gardenandgun-jubilee",
+    "description": "G&G Jubilee Mustache/Wordpress Theme",
+    "type": "project",
+    "require": {
+        "mustache/mustache": "^2.12"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Asif Ahmed",
+            "email": "asif@stitchdesignco.com"
+        }
+    ]
+}

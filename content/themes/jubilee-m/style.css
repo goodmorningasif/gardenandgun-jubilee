@@ -1,5 +1,5 @@
 /*
-Theme Name: Garden & Gun Jubilee
+Theme Name: Garden & Gun Jubilee Mustache
 Theme URI: Garden & Gun Jubilee
 Author: SDCO Partners 
 Author URI: https://SDCOPartners.com
@@ -12,3 +12,21 @@ Tags:
 
 This theme is the property of SDCOPartners and is not meant for reuse.
 */
+
+
+body{
+  background: whitesmoke;
+  color: grey;
+}
+
+body:after{
+  content: "{{mustache}}";
+}
+
+a{
+  color: grey;
+}
+
+.pagination{
+  margin-top: 1em;
+}
