@@ -1,5 +1,6 @@
 <?php 
 
+/* BASE Assets */
 $data = array(
 	'wp_title' => wp_title('', false, 'right'),
 	'wp_head' => output_buffer_contents(wp_head),
@@ -20,6 +21,29 @@ foreach ($data['pages'] as $page) {
 
 foreach($data['categories'] as $category) {
 	$category->link = get_category_link($category->term_id);
+}
+
+/* SVG Assets */
+$data['assets']['svg']['logo_main' ] = output_buffer_contents(function(){
+  echo file_get_contents($GLOBALS['url'].'/assets/svg/logo-main.svg');
+});  
+$data['assets']['svg']['hamburger'] = output_buffer_contents(function(){
+	echo file_get_contents($GLOBALS['url'].'/assets/svg/hamburger.svg');
+});
+
+/* COPY Assets */
+$data['assets']['copy']['partner_message'] = output_buffer_contents(function(){
+	echo get_field('ft_partner-tag', 'options'); 
+});
+
+$data['assets']['partners'] = array();
+$partners = get_field('ft_partner-logos', 'options');
+
+if($partners) {
+	foreach($partners as $partner) {
+		$tuple = array('img' => $partner['ft_partner-logos_img'],'link' => $partner['ft_partner-logos_url']);
+		array_push($data['assets']['partners'], $tuple);
+	}
 }
 
 return $data;

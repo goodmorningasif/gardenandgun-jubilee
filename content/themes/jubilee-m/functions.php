@@ -16,7 +16,7 @@
 
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
-  $GLOBALS['root'] = '10.1.10.96/gardenandgun-jubilee';
+  $GLOBALS['root'] = 'http://10.1.10.96/gardenandgun-jubilee';
   $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/gardenandgun-jubilee';
 
   /* Add Styles, Fonts, and Javascript */
