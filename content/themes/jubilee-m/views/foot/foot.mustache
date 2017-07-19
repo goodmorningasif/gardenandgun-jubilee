@@ -1,14 +1,32 @@
 <div class="foot">
-	<h3 class="partner_message">
-	  {{assets.copy.partner_message}}
-	</h3>
-	<div class="partners">
-		{{# assets.partners}}
-		  <div class="partner">
-		    <a href="{{link}}" target="_blank" >
-	 			  <img src="{{img.url}}">
- 			  </a>
-		  </div>
-		{{/ assets.partners}}
+	{{> foot/partners}}
+	<div class="links">
+	  <div class="scdo">
+	  	<span>site by</span>
+	  	<a href="http://www.sdcopartners.com" target="_blank">
+	  	  sdco partners
+	  	</a>
+	  </div>
+	  <div class="menu">
+	    {{# assets.ft_menu}}
+	      <div class="item">
+	      {{# url}}
+		      <a href="{{url}}" target="_blank">
+		    {{/ url}}
+	      {{# po}}
+		      <a href="{{url}}" target="_blank">
+		    {{/ po}}
+		    {{# email}}
+		      <a href="mailto:{{email}}">
+		    {{/ email}}
+		        {{title}}
+		      </a>
+	      </div>
+	    {{/ assets.ft_menu}}
+	  </div>
+	  <div class="gg">
+	  	<span>Garden &amp; Gun</span>
+	  	Copyright Garden &amp; Gun
+	  </div>
 	</div>
 </div>

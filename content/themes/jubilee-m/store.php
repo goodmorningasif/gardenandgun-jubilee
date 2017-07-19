@@ -23,6 +23,7 @@ foreach($data['categories'] as $category) {
 	$category->link = get_category_link($category->term_id);
 }
 
+
 /* SVG Assets */
 $data['assets']['svg']['logo_main' ] = output_buffer_contents(function(){
   echo file_get_contents($GLOBALS['url'].'/assets/svg/logo-main.svg');
@@ -31,20 +32,43 @@ $data['assets']['svg']['hamburger'] = output_buffer_contents(function(){
 	echo file_get_contents($GLOBALS['url'].'/assets/svg/hamburger.svg');
 });
 
+
 /* COPY Assets */
 $data['assets']['copy']['partner_message'] = output_buffer_contents(function(){
 	echo get_field('ft_partner-tag', 'options'); 
 });
 
+
+/* PARTNERS Repeater */
 $data['assets']['partners'] = array();
 $partners = get_field('ft_partner-logos', 'options');
-
 if($partners) {
 	foreach($partners as $partner) {
-		$tuple = array('img' => $partner['ft_partner-logos_img'],'link' => $partner['ft_partner-logos_url']);
-		array_push($data['assets']['partners'], $tuple);
+		$row = array(
+			'img' => $partner['ft_partner-logos_img'],
+			'link' => $partner['ft_partner-logos_url']
+		);
+		array_push($data['assets']['partners'], $row);
 	}
 }
+
+/* FOOTER MENU Repeater */
+$data['assets']['ft_menu'] = array();
+$ft_menu = get_field('ft_menu', 'options');
+if($ft_menu) {
+	foreach($ft_menu as $item) {
+		$layout = $item['ft_menu_link'][0]['acf_fc_layout'];
+    $row = array(
+    	'title' => $item['ft_menu_title'], 
+    	'url' => $item['ft_menu_link'][0][$layout.'_url'],
+    	'email' => $item['ft_menu_link'][0][$layout.'_email'],
+    	'po' => $item['ft_menu_link'][0][$layout.'_po'],
+    );
+    array_push($data['assets']['ft_menu'], $row);
+	}
+}
+
+
 
 return $data;
 

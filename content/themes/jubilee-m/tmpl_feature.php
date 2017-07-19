@@ -13,7 +13,7 @@ echo $compiler->render('tmpl_feature', $data);
 
 echo '=========================';
 echo '<pre>';
-print_r($data['assets']['partners']);
+print_r($data['assets']['ft_menu']);
 echo '</pre>';
 
 ?>
