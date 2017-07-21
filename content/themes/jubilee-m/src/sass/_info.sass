@@ -1,0 +1,84 @@
+/*  _info.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.info
+  +flex
+  margin-top: 50px
+
+  .left,
+  .right
+    flex: 0 0 25%
+    position: relative
+    margin-top: 20px
+    padding-top: 15px
+    padding-bottom: 10px
+
+    &:before,
+    &:after
+      content: ' '
+      position: absolute
+      width: 24px
+      height: 1px
+      left: calc(50% - 12px)
+
+    &:before
+      top: 0
+
+    &:after
+      bottom: 0
+  
+  .right
+
+    h3
+      width: 100%
+      max-width: 160px
+      margin: 0 auto
+
+  .middle
+    flex: 0 0 50%
+    height: 122px
+    padding-top: 30px
+
+    h3
+      padding-bottom: 12px
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.info
+  
+  .left,
+  .right
+    +genhead
+    color: $orange
+    text-transform: uppercase
+    text-align: center
+
+    &:before,
+    &:after
+      background-color: $orange
+
+  .middle
+    background-color: $grey
+    text-align: center
+
+    h3
+      font-size: 2rem
+      font-family: $brandon
+      color: $white
+      letter-spacing: 0.25rem
+      text-transform: uppercase
+
+    h2
+      font-size: 1rem
+      font-family: 'Sentinel SSm A', 'Sentinel SSm B', serif
+      font-style: italic
+      font-weight: 500
+      color: $white
+      letter-spacing: 0.05rem

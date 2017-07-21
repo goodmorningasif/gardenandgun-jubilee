@@ -1,0 +1,60 @@
+/*  _head.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+nav
+  display: none
+
+header 
+  max-width: 1225px
+  width: 100%
+  margin: 0 auto
+
+
+.head
+  +flex
+
+  .hamburger
+    flex: 0 0 36px
+    padding-top: 10px
+
+    svg
+      width: 36px
+      height: 20px
+
+  .logo
+    flex: 0 0 414px
+
+    svg
+      width: 414px
+      height: 118px
+
+  .tickets
+    flex: 0 0 113px
+    height: 36px
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.head 
+  .tickets
+    +genhead($c: 40px)
+    background-color: $orange
+    color: $white
+    text-align: center
+    white-space: nowrap
+    transition: 0.15s all ease
+
+    &:hover
+      background-color: $grey
+
+
+
+
+
+

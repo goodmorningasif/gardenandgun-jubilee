@@ -1,25 +1,19 @@
-/* Media Breakpoints & Mixins */
-
-$break-xlarge: 1300px
-$break-large: 1024px
-$break-medium: 900px
-$break-small: 500px
+/* Breakpoints Mixins */
 
 =desktop
-  @media(min-width: #{$break-xlarge})
+  @media(min-width: #{1225px})
     @content
 
 =tablet
-  @media(min-width: #{$break-medium})
+  @media(min-width: #{900px})
     @content
 
 =tiny
-  @media(max-width: #{$break-small})
+  @media(max-width: #{500px})
     @content
     
 
 /* Flexbox */
-
 =flex($a: flex, $b: space-between, $c: flex-start, $d: wrap)
   display: $a
   justify-content: $b

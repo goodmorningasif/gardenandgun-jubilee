@@ -25,9 +25,9 @@ $data['feature'] = get_field('feat_flexible');
 
 echo $compiler->render('tmpl_feature', $data);
 
-echo '=========================';
-echo '<pre>';
-print_r($data['assets']['nav']);
-echo '</pre>';
+// echo '=========================';
+// echo '<pre>';
+// print_r($data['assets']['header']);
+// echo '</pre>';
 
 ?>
