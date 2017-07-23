@@ -95,9 +95,9 @@ endwhile;endif;
 
 echo $compiler->render('tmpl_feature', $data);
 
-echo '=========================';
-echo '<pre>';
-print_r($data['page']['layouts']);
-echo '</pre>';
+// echo '=========================';
+// echo '<pre>';
+// print_r($data['page']['layouts']);
+// echo '</pre>';
 
 ?>

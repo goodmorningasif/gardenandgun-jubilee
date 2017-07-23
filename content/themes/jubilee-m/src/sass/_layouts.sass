@@ -1,0 +1,24 @@
+/*  _layouts.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.layouts
+  +width($c: 35px auto 0)
+
+.copy-to-img-layout,
+.3-col-layout,
+.img-to-copy-layout
+  +flex
+  width: 100%
+
+.copy-to-img-layout
+  .copy,
+  .image-wrapper
+	  flex: 0 0 50%
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
