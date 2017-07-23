@@ -7,11 +7,77 @@
 .links
   width: 100%
   max-width: 1225px
-  margin: 0 auto
+  margin: 60px auto 0
   +flex
 
+  .sdco,
+  .gg
+    flex: 0 0 25%
+
+  .menu
+    flex: 0 0 50%
+
+.menu
+  +flex
+
+  .item,
+    flex: 0 0 auto
+
+  .social_media
+    flex: 0 0 150px
+    +flex
+
+    .item
+      flex: 0 0 30px
+
+    .item svg
+      width: 30px
+      height: 30px
+
+    .item:last-of-type
+      flex: 0 0 100%
+     
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.links
+
+  .sdco,
+  .sdco a,
+  .gg,
+  .gg span,
+    +genhead($b: 0.35rem)
+    color: $orange
+
+  .sdco,
+  .gg
+    span
+      display: block
+
+  .gg
+    text-align: right
+
+  .item,
+  .item a
+    +genhead
+    color: $black
+
+    &:hover
+      color: $orange
+
+.social_media
+  .item
+    &:hover
+      a svg path
+        fill: $black
+
+  h4
+    +genhead($b: 1.1rem, $d: 0.3em)
+    color: $orange
+
+
+
+
 
