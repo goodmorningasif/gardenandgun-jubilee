@@ -1,0 +1,40 @@
+  <div class="3-col-layout">
+    <div class="left-col">
+    {{# left_col}}
+      {{> images}}
+    {{/ left_col}}
+    </div>
+    <div class="middle-right-col">
+    {{# img_row}}
+      <div class="image-row">
+      {{# middle}}
+        {{> images}}
+	    {{/ middle}}
+	    {{# right}}
+        {{> images}}
+	    {{/ right}}
+      </div>
+    {{/ img_row}}
+      <div class="cta">
+	      {{# cta}}
+	      <a href="{{link}}">
+		      {{# icon}}
+	        <div class="cta-icon">
+	        	{{{icon}}}
+	        </div>
+	        <div class="cta-text">
+	          {{# title}}
+	          <div class="title">
+	            {{{title}}}
+	          </div>
+	          {{/ title}}
+	          <h3 class="text">
+	            {{text}}
+	          </h3>
+	        </div>
+		      {{/ icon}}
+	      </a>
+	      {{/ cta}}
+      </div>
+    </div>
+  </div>

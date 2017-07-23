@@ -1,17 +1,11 @@
 {{# page.layouts}}
-  {{# feat_cp-img_image}}
-  <div class="copy-to-img-layout">
-    <p>this is a copy-to-image layout</p>
-  </div>
-  {{/ feat_cp-img_image}}
-  {{# feat_3-col_left-img}}
-  <div class="3-col-layout">
-    <p>this is a 3-column layout</p>
-  </div>
-  {{/ feat_3-col_left-img}}
-  {{# feat_img-cp_img}}
-  <div class="img-to-copy-layout">
-    <p>this is a image-to-copy layout</p>
-  </div>
-  {{/ feat_img-cp_img}}
+  {{# cp_img}}
+    {{> tmpl_feature/copy-to-img}}
+  {{/ cp_img}}
+  {{# 3_col}}
+    {{> tmpl_feature/3-col}}
+  {{/ 3_col}}
+  {{# img_cp}}
+     {{> tmpl_feature/img-to-copy}}
+  {{/ img_cp}}
 {{/ page.layouts}}
