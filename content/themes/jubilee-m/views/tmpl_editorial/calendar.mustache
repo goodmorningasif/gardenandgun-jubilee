@@ -1,0 +1,24 @@
+{{# date}}
+<h2>
+	{{date}}
+</h2>
+{{/ date}}
+{{^ date}}
+  {{# special}}
+	<div class="special">
+	  Special Programming
+	</div>
+	{{/ special}}
+<h3>
+	{{headline}}
+</h3>
+<div class="time">
+   {{time}}
+</div>
+{{{description}}}
+	{{# link}}
+		<a href="{{link}}">
+		  {{link_title}}
+		</a>
+	{{/ link}}
+{{/ date}}

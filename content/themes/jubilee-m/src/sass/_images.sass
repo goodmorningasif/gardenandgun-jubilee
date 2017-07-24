@@ -1,0 +1,53 @@
+/*  _images.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.image-wrapper
+  width: 100%
+  position: relative
+  overflow: hidden
+
+  .image
+    +img
+
+  .caption
+    position: absolute
+    bottom: 0
+    left: 0
+
+    h2,
+    h3
+      display: inline-block
+
+    h2
+      margin-top: 8px
+      margin-bottom: 12px
+
+    h3
+      padding: 10px 15px 6px 15px
+
+    h2
+      padding: 15px 20px 15px 20px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.image-wrapper
+  .image
+
+  .caption
+    h3, 
+    h2
+      background-color: $grey
+      color: $white
+
+    h3
+      +genhead($b: 0.7rem, $c: 1em, $d: 0.12em)
+
+    h2
+      +gentag($a: 1.3rem)
+      letter-spacing: 0.05em
