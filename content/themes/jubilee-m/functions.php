@@ -24,8 +24,10 @@
     wp_enqueue_style('typography', 'https://cloud.typography.com/778678/7958572/css/fonts.css');
     wp_enqueue_style('webfonts', $GLOBALS['url'].'/assets/webfonts/MyFontsWebfontsKit.css');
     wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
+    wp_enqueue_style('swipercss', $GLOBALS['url'].'/prod/swiper.min.css');
     wp_enqueue_script('underscore', $GLOBALS['url'].'/prod/underscore.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('scripts', $GLOBALS['url'].'/prod/scripts.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('swiperjs', $GLOBALS['url'].'/prod/swiper.min.js', array('jquery'), '1.0.0', true);
   }
   add_action( 'wp_enqueue_scripts', 'my_enqueue_style' );
   // add_theme_support( 'post-thumbnails' );

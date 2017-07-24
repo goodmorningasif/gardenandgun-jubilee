@@ -37,9 +37,25 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .image-wrapper
+
+  &:hover
+    .image
+      transform: scale(1.03)
+
+    .caption
+      opacity: 1
+      transform: translateX(-1%)
+    
+
   .image
+    transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1)
 
   .caption
+    opacity: 0
+    transform: translateX(-100%)
+    transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1), 0.4s opacity ease
+
+
     h3, 
     h2
       background-color: $grey

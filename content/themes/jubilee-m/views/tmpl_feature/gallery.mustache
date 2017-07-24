@@ -1,9 +1,15 @@
 {{# page.gallery.toggle}}
-  <div class="wrapper">
-  {{# page.gallery.images}}
-    <div class="slider"
-      style="background-image: url({{url}})">
-    </div>
-  {{/ page.gallery.images}}
+  <div class="wrapper swiper-container">
+	  <div class="swiper-wrapper">
+	  {{# page.gallery.images}}
+	    <div class="swiper-slide">
+		    <div class="slider"
+		      style="background-image: url({{url}})">
+		    </div>
+	    </div>
+	  {{/ page.gallery.images}}
+	  </div>
+	  <div class="prev">previous</div>
+    <div class="next">next</div>
   </div>
 {{/ page.gallery.toggle}}

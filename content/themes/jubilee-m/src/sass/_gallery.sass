@@ -5,13 +5,58 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .gallery
-  +width($c: -15px auto 0)
+  +width($c: -75px auto 0)
 
-  .slider
-    +img
-    width: 100%
-    height: 689px
+.swiper-container
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 688px
+  margin: 60px
+
+
+.swiper-slide
+  overflow: hidden
+
+.slider
+  +img
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+
+
+.prev,
+.next
+  position: absolute
+  top: 50%
+  width: 120px
+  height: 30px
+  z-index: 10
+  margin-top: -22px
+  padding: 5px
+
+.prev
+  left: 0
+  right: auto
+
+.next
+  right: 0
+  left: auto
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
-/* INCEPTION RULE: DO NOT nest more than 4 
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.prev,
+.next
+  +gentag
+  opacity: 0
+  background-color: $grey
+  color: $white
+  text-align: center
+  background-image: none
+  cursor: pointer
+
