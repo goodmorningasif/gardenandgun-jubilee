@@ -1,0 +1,1 @@
+"use strict";var $j=jQuery.noConflict();$j(document).ready(function(){$j(".hamburger").on("click",function(){console.log("clicked"),$j("nav").hasClass("toggle-nav")?$j("nav").removeClass("toggle-nav"):$j("nav").addClass("toggle-nav")})});

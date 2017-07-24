@@ -14,8 +14,8 @@ $page_ID = get_the_ID();
 $data['page']['page_id'] = $page_ID;
 
 $data['page']['layouts']['edit_copy'] = array();
-$data['page']['layouts']['edit_sec-head'] = array();
 $data['page']['layouts']['edit_image-grid'] = array();
+$data['page']['layouts']['edit_sec-head'] = array();
 $data['page']['layouts']['calendar'] = array();
 
 // Layouts
@@ -30,7 +30,7 @@ if(have_rows('edit_flexible', $page_ID)) :
     if(get_sub_field('add_image') || get_sub_field('make_full')) :
     	$normal = false;
     endif;
-    $data['page']['layouts']['edit_copy'] = array(
+    $thisData = array(
     	'add_image' => get_sub_field('add_image'),
     	'make_full' => get_sub_field('make_full'),
     	'normal' => $normal,
@@ -39,16 +39,9 @@ if(have_rows('edit_flexible', $page_ID)) :
     	'image' => get_sub_field('image'),
     	'image_caption' => get_sub_field('image_caption'),
     );
-    // array_push($data['page']['layouts']['edit_copy'], $thisData);
+    array_push($data['page']['layouts']['edit_copy'], $thisData);
   endif;
 
-  if(get_row_layout() === 'edit_sec-head') :
-  	$thisData = array(
-  		'sectional' => get_sub_field('sectional'),
-  		'headline' => get_sub_field('headline'),
-  	);
-    array_push($data['page']['layouts']['edit_sec-head'], $thisData);
-  endif;
 
   if(get_row_layout() === 'edit_image-grid') :
   	$thisData = array(
@@ -64,6 +57,14 @@ if(have_rows('edit_flexible', $page_ID)) :
     array_push($data['page']['layouts']['edit_image-grid'], $thisData);
   endif;
 
+  if(get_row_layout() === 'edit_sec-head') :
+  	$thisData = array(
+  		'sectional' => get_sub_field('sectional'),
+  		'headline' => get_sub_field('headline'),
+  	);
+    array_push($data['page']['layouts']['edit_sec-head'], $thisData);
+  endif;
+  
   if(get_row_layout() === 'calendar') :
   	if(have_rows('content', $page_ID)):
   		while(have_rows('content', $page_ID)):
@@ -95,9 +96,9 @@ endwhile;endif;
 
 echo $compiler->render('tmpl_editorial', $data);
 
-echo '=========================';
-echo '<pre>';
-print_r($data['page']['layouts']);
-echo '</pre>';
+// echo '=========================';
+// echo '<pre>';
+// print_r($data['page']['layouts']);
+// echo '</pre>';
 
 ?>

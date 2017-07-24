@@ -4,19 +4,18 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
-nav
-  display: none
-
 header 
   +width
 
 
 .head
   +flex
+  position: relative
 
   .hamburger
     flex: 0 0 36px
     padding-top: 10px
+    position: relative
 
     svg
       width: 36px
@@ -24,6 +23,7 @@ header
 
   .logo
     flex: 0 0 414px
+    position: relative
 
     svg
       width: 414px
@@ -32,7 +32,48 @@ header
   .tickets
     flex: 0 0 113px
     height: 36px
+    position: relative
 
+nav
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+
+  .hamburger
+    padding-top: 10px
+    position: absolute
+    top: 15px
+    left: 28px
+
+    svg
+      width: 36px
+      height: 20px
+
+    .cls-1
+      stroke: $white
+
+  .main_menu
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+    > div
+      margin-bottom: 90px
+
+  a 
+    display: block
+    text-align: center
+
+  .main
+    margin-bottom: 25px
+
+  .sub
+    width: 135px
+    margin: 0 auto 22px
+    padding: 8px 15px 5px
 
 
 /* OBJECTS -> For styling objects */
@@ -51,8 +92,20 @@ header
     &:hover
       background-color: $grey
 
+nav
+  opacity: 0.1
+  background-color: rgba(255, 96, 0, .9)
+  transition: 0.4s opacity ease
 
+  .main
+    +gentag($a: 2rem)
+    letter-spacing: 0.05em
+    color: $white
 
+  .sub
+    +genhead($b: 0.7rem)
+    color: $white
+    border: 1px solid $white
 
 
 

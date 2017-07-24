@@ -1,26 +1,32 @@
 {{# normal}}
 <div class="copy-normal">
-  {{{headline}}}
+  <div class="headline">
+    {{{headline}}}
+  </div>
   {{{para}}}
 </div>
 {{/ normal}}
 {{# make_full}}
 <div class="copy-full">
-  {{{headline}}}
+  <div class="headline">
+    {{{headline}}}
+  </div>
   {{{para}}}
 </div>
 {{/ make_full}}
 {{# add_image}}
 <div class="copy-image">
   <div class="text">
-  {{{headline}}}
-  {{{para}}}
+    <div class="headline">
+      {{{headline}}}
+    </div>
+    {{{para}}}
   </div>
   <div class="image-wrapper">
     <div class="image"
       style="background-image: url({{image.url}})">
     </div>
-    <p>{{caption}}</p>
+    <p>{{image_caption}}</p>
   </div>
 </div>
 {{/ add_image}}

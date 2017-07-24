@@ -1,17 +1,28 @@
 <nav>
+  <div class="hamburger">
+    {{{assets.svg.hamburger}}}
+  </div>
 	<div class="main_menu">
-	{{# assets.nav.mm}}
-	  <a href="{{mm_link}}"
-	    target="_blank">
-	  	{{mm_title}}
-	  </a>
-	{{/ assets.nav.mm}}
-	{{# assets.nav.sm}}
-	  <a href="{{sm_link}}"
-	    target="_blank">
-	  	{{sm_title}}
-	  </a>
-	{{/ assets.nav.sm}}
+		<div>
+		{{# assets.nav.mm}}
+		  <a href="{{mm_link.url}}"
+		    target="_blank">
+			  <div class="main">
+		  	{{mm_title}}
+		  	</div>
+		  </a>
+		{{/ assets.nav.mm}}
+		</div>
+		<div>
+		{{# assets.nav.sm}}
+		  <a href="{{sm_link}}"
+		    target="_blank">
+		    <div class="sub">
+		  	{{sm_title}}
+		  	</div>
+		  </a>
+		{{/ assets.nav.sm}}
+		</div>
 	</div>
 
 </nav>
