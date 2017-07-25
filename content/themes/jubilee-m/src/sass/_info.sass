@@ -8,6 +8,11 @@
   +flex
   margin-top: 50px
 
+  +tiny
+    margin-top: 20px
+    margin-left: 40px
+    margin-right: 40px
+
   .left,
   .right
     flex: 0 0 25%
@@ -15,6 +20,9 @@
     margin-top: 15px
     padding-top: 15px
     padding-bottom: 10px
+
+    +tiny
+      display: none
 
     &:before,
     &:after
@@ -37,13 +45,42 @@
       max-width: 160px
       margin: 0 auto
 
+  .left
+
+    h3
+      +large
+        width: 100%
+        max-width: 160px
+        margin: 0 auto
+
   .middle
     flex: 0 0 50%
     height: 122px
     padding-top: 30px
 
+    +tiny
+      flex: 0 0 100%
+      height: 100%
+      padding: 15px 0 10px
+      margin-top: 
+
     h3
       padding-bottom: 12px
+
+      +large
+        padding-bottom: 5px
+
+      +tiny
+        padding-bottom: 0
+
+    h2
+
+      +large
+        max-width: 280px
+        margin: 0 auto
+
+      +tiny
+        display: none
 
 
 
@@ -75,6 +112,13 @@
       letter-spacing: 0.25rem
       text-transform: uppercase
 
+      +large
+        font-size: 1.4rem
+
+      +tiny
+        font-size: 0.7rem
+
     h2
       +gentag
       color: $white
+      line-height: 1.4rem

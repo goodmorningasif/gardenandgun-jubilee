@@ -1,28 +1,41 @@
 <nav>
-  <div class="hamburger">
-    {{{assets.svg.hamburger}}}
-  </div>
-	<div class="main_menu">
-		<div>
-		{{# assets.nav.mm}}
-		  <a href="{{mm_link.url}}"
-		    target="_blank">
-			  <div class="main">
-		  	{{mm_title}}
-		  	</div>
-		  </a>
-		{{/ assets.nav.mm}}
-		</div>
-		<div>
-		{{# assets.nav.sm}}
-		  <a href="{{sm_link}}"
-		    target="_blank">
-		    <div class="sub">
-		  	{{sm_title}}
-		  	</div>
-		  </a>
-		{{/ assets.nav.sm}}
+  <div class="nav-wrapper">
+	  <div class="hamburger">
+	    {{{assets.svg.hamburger}}}
+	  </div>
+		<div class="main_menu">
+			<div>
+			{{# assets.nav.mm}}
+	      {{# mm_link}}
+	        {{# mm_link-url_url}}
+					  <a href="{{mm_link-url_url}}">
+			    {{/ mm_link-url_url}}
+			    {{# mm_link-email_email}}
+				    <a href="mailto://{{mm_link-email_email}}">
+			    {{/ mm_link-email_email}}
+	      {{/ mm_link}}
+				  <div class="main">
+			  	{{mm_title}}
+			  	</div>
+			  </a>
+			{{/ assets.nav.mm}}
+			</div>
+			<div>
+			{{# assets.nav.sm}}
+			  {{# sm_link}}
+			    {{# sm_link-url_url}}
+					  <a href="{{sm_link-url_url}}">
+					{{/ sm_link-url_url}}
+			    {{# sm_link-email_email}}
+					  <a href="mailto://{{sm_link-email_email}}">
+					{{/ sm_link-email_email}}
+			  {{/ sm_link}}
+			    <div class="sub">
+			  	{{sm_title}}
+			  	</div>
+			  </a>
+			{{/ assets.nav.sm}}
+			</div>
 		</div>
 	</div>
-
 </nav>

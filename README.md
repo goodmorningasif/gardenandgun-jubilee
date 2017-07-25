@@ -120,27 +120,27 @@ Follow these steps to edit a current project. This will set up the repository an
 
 ### Deploying to Server
 1. In Liquid Web ...
-  * [ ]  Create account for new site
+  * [x]  Create account for new site
 2. Connect to Server
-  * [ ]  Upload folder `/wordpress/` to `/public_html/`
-  * [ ]  Upload folder `/content/` to `/public_html/`
-  * [ ]  Upload file `wp-config.php` to `/public_html/`
-  * [ ]  Upload file `local-config.php` to `/public_html/`
-  * [ ]  Upload file `index.php` to `/public_html/`
+  * [x]  Upload folder `/wordpress/` to `/public_html/`
+  * [x]  Upload folder `/content/` to `/public_html/`
+  * [x]  Upload file `wp-config.php` to `/public_html/`
+  * [x]  Upload file `local-config.php` to `/public_html/`
+  * [x]  Upload file `index.php` to `/public_html/`
   * [ ]  Optional -> Upload file `README.md` to `/public_html/`
 3. Adjust Database
-  * [ ]  Make a copy of the local site db 
+  * [x]  Make a copy of the local site db 
   * [ ]  IF USING DATED MYSQL -> Convert to UTF8
-  * [ ]  Find and replace local path to server path
+  * [x]  Find and replace local path to server path
 4. In cPanel ...
-  * [ ]  Create new db
-  * [ ]  Create new user 
-  * [ ]  Add user to db
-  * [ ]  Upload adjusted local site db to server db
+  * [x]  Create new db
+  * [x]  Create new user 
+  * [x]  Add user to db
+  * [x]  Upload adjusted local site db to server db
 5. Update config files
-  * [ ]  Update db credentials in `local-config.php`
-  * [ ]  Set var $local_path to new path in `wp-config.php`
-  * [ ]  Turn off debugger in `wp-config.php`
+  * [x]  Update db credentials in `local-config.php`
+  * [x]  Set var $local_path to new path in `wp-config.php`
+  * [x]  Turn off debugger in `wp-config.php`
 If you choose not to follow these steps, you will be unable to keep the repository up-to-date, and you will have to deal with minified and uglified JS and CSS files. See notes under DEV ENVIRONMENT for more info.
 
 
@@ -163,7 +163,7 @@ For All other files ...
 
 ## Team 
   
-  * PROJECT MANAGER   :   
-  * UX/UI DESIGNER    :   
-  * DEVELOPER         :   
+  * PROJECT MANAGER   :   Paige Feighley
+  * UX/UI DESIGNER    :   Amy Pastre, Evan Tarry
+  * DEVELOPER         :   Asifuzzaman Ahmed
 

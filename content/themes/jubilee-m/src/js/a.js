@@ -18,13 +18,16 @@ $j(document).ready(function(){
 		}
 	});
 
-	// initiate swiper
-
+	// initiate swiperjs
 	var totalSlides = $j('.swiper-wrapper').children().length
 	if(totalSlides > 1) {
 		var swiper = new Swiper('.swiper-container', swiperOptions);
     $j('.prev').addClass('toggle-opacity');
     $j('.next').addClass('toggle-opacity');
 	}
+
+
+
+
 
 });

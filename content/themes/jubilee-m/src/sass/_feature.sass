@@ -30,26 +30,46 @@
   .image-wrapper
     flex: 0 0 50%
 
+    +tiny
+      flex: 0 0 100%
+
   .image-wrapper
     .image
       width: 100%
       height: 386px
 
+      +tiny
+        height: 250px
+
   .copy
     padding-right: 11%
+
+    +tiny
+      padding: 20px
 
 .img-to-copy-layout
     
   .image-wrapper
     flex: 0 0 63%
 
+    +tiny
+      flex: 0 0 100%
+
     .image
       width: 780px
       height: 520px
 
+      +tiny
+        width: 100%
+        height: 250px
+
   .copy
     flex: 0 0 36%
     padding-left: 55px
+
+    +tiny
+      flex: 0 0 100%
+      padding: 20px
 
     .icon
       display: inline-block
@@ -57,6 +77,10 @@
       svg
         width: 40px
         height: 90px
+
+        +tiny
+          height: 40px
+          width: 40px
       
       h3
         display: inline-block
@@ -74,12 +98,22 @@
   .left-col
     flex: 0 0 33.33%
 
+    +tiny
+      flex: 0 0 100%
+
     .image
       width: 397px
       height: 772px
 
+      +tiny
+        width: 100%
+        height: 250px
+
   .middle-right-col
     flex: 0 0 66.66%
+
+    +tiny
+      flex: 0 0 100%
 
   .image-row
     +flex
@@ -87,37 +121,84 @@
     .image-wrapper
       flex: 0 0 50%
 
+      +tiny
+        flex: 0 0 100%
+        margin-bottom: 30px
+
       .image
         width: 397px
         height: 456px
+
+        +tiny
+          width: 100%
+          height: 250px
 
   .left-copy
     max-width: 329px
     margin: 60px auto 0
 
+    +tiny
+      margin-top: 10px
+
   p
     strong
       display: block
+
+    +tiny
+     padding: 20px
 
   .cta
     +flex
     padding-top: 50px
 
+    +tiny
+      padding-top: 0
+      padding-bottom: 10px
+
     .cta-icon
       flex: 0 0 190px
+
+      +tiny
+        flex: 0 0 10%
+
+      svg
+        +tiny
+          width: 60px
+          height: 20
 
     .cta-text
       flex: 1 0 auto
       padding: 0 15px 0 40px
 
-      .text
-        +genhead($b: 1.8rem)
+      +tiny
+        flex: 0 0 80%
+        padding: 0 15px
+
+      svg
+        +tiny
+          width: 200px
 
 .middle-right-col
   > .image-wrapper
     .image
       width: 807px
       height: 537px
+
+      +tiny
+        width: 100%
+        height: 250px
+
+
+.tagline-mobile
+  display: none
+
+  +tiny
+    display: block
+    padding: 20px
+
+  h2
+    padding-top: 5px
+    padding-bottom: 10px
 
   
 
@@ -135,20 +216,54 @@
   .headline
     +gentitle
 
+    +tiny
+        font-size: 1.8rem
+
     em
       font-style: italic
 
   .para
     +gencopy
 
+    +tiny
+        font-size: 1rem
+
 .three-col-layout
   p
     +gencopy
+    +tiny
+        font-size: 1rem
 
     strong
       +gentag($a: 2.5rem)
       line-height: 1.4em
+      +tiny
+        font-size: 1.4rem
+
+
 
 .cta
   .text
+    +genhead($b: 1.8rem)
     color: $black
+
+    +tiny
+      font-size: 1rem
+
+
+.tagline-mobile
+  border-bottom: 1px solid #978f8b
+  h3
+    +genhead($b: 0.7rem)
+    color: $orange
+    text-transform: uppercase
+    text-align: center
+
+  h2
+    +gentag
+    color: $black
+    line-height: 1.4em
+    text-align: center
+
+  
+    

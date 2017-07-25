@@ -1,0 +1,18 @@
+<section class="qa wow fadeIn"
+  data-wow-duration="1s">
+  <h2>
+		{{page.page_title}}
+  </h2>
+  <div class="block">
+  {{# page.faq}}
+    <div class="pair">
+      <div class="question">
+      	{{{question}}}
+      </div>
+      <div class="answer">
+      	{{{answer}}}
+      </div>
+    </div>    
+  {{/ page.faq}}
+  </div>
+</section>

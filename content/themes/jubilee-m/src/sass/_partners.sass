@@ -5,12 +5,36 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .partners
+  +flex
   width: 100%
   max-width: 850px
   margin: 40px auto 0
-  +flex
+
+  +large
+    max-width: 600px
+    margin-top: 15px
+
+  +tiny
+    max-width: 300px
 
   .partners
+
+  .partner
+
+    +tiny
+      flex: 0 0 auto
+      margin: 0 auto
+
+    img 
+
+      +large
+        height: 100%
+        max-height: 50px
+
+      +tiny
+        height: 100%
+        max-height: 30px
+
 
 
 
@@ -25,3 +49,9 @@
 .partner_message
   +gentag($a: 1.5rem)
   text-align: center
+
+  +large
+    font-size: 1.2rem
+
+  +tiny
+    font-size: 0.9rem

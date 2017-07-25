@@ -8,25 +8,50 @@
   +width($c: 60px auto 0)
   +flex
 
+  +large
+    margin-top: 30px
+
+  +tiny
+    padding-top: 20px
+    margin-top: 30px
+
   .sdco,
   .gg
     flex: 0 0 25%
 
+    +medium
+      flex: 0 0 100%
+
   .menu
     flex: 0 0 50%
+
+    +medium
+       flex: 0 0 100%
+
 
 .menu
   +flex
 
+  +tiny
+    margin-top: 20px
+    margin-bottom: 20px
+
   .item,
     flex: 0 0 auto
+
+    +medium
+      flex: 0 0 100%
 
   .social_media
     flex: 0 0 150px
     +flex
 
+    +medium
+      margin: 0 auto
+
     .item
       flex: 0 0 30px
+
 
     .item svg
       width: 30px
@@ -42,12 +67,18 @@
 
 .links
 
+  +tiny
+    border-top: 1px solid #978f8b
+
   .sdco,
   .sdco a,
   .gg,
   .gg span,
     +genhead($b: 0.35rem)
     color: $orange
+
+    +medium
+      text-align: center
 
   .sdco,
   .gg
@@ -57,6 +88,9 @@
   .gg
     text-align: right
 
+    +medium
+      text-align: center
+
   .item,
   .item a
     +genhead
@@ -64,6 +98,10 @@
 
     &:hover
       color: $orange
+
+    +medium
+      text-align: center
+      font-size: 0.8rem
 
 .social_media
   .item

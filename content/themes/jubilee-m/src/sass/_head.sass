@@ -9,32 +9,61 @@ header
   position: relative
   z-index: 100
 
+  +large
+    padding-left: 10px
+    padding-right: 10px
+
 
 .head
   +flex
   position: relative
 
+
   .hamburger
-    flex: 0 0 36px
+    flex: 0 0 113px
     padding-top: 10px
     position: relative
+
+    +tiny
+      flex: 0 0 42px
 
     svg
       width: 36px
       height: 20px
 
+      +tiny
+        width: 20px
+        height: 13px
+
   .logo
     flex: 0 0 414px
     position: relative
+
+    +medium
+      flex: 0 0 250px
+
+    +tiny
+      flex: 0 0 172px
 
     svg
       width: 414px
       height: 118px
 
+      +medium
+        width: 250px
+        height: 72px
+
+      +tiny
+        width: 172px
+        height: 49px
+
   .tickets
     flex: 0 0 113px
     height: 36px
     position: relative
+
+    +tiny
+     flex: 0 0 42px
 
 nav
   width: 100vw
@@ -43,18 +72,28 @@ nav
   top: 0
   left: 0
   z-index: 200
-  transform: translateY(-100vh)
+  transform: translateY(-150vh)
   transition: 0.6s transform cubic-bezier(0.645, 0.045, 0.355, 1), 0.4s opacity ease
+
+  .nav-wrapper
+    +width
+    height: 100%
+    position: relative
 
   .hamburger
     padding-top: 10px
     position: absolute
     top: 15px
-    left: 26px
+    left: 10px
 
     svg
       width: 36px
       height: 20px
+
+      +tiny
+        width: 20px
+        height: 13px
+
 
     .cls-1
       stroke: $white
@@ -67,6 +106,9 @@ nav
     > div
       margin-bottom: 90px
 
+      +tiny
+        margin-bottom: 10px
+
   a 
     display: block
     text-align: center
@@ -74,10 +116,14 @@ nav
   .main
     margin-bottom: 25px
 
+
   .sub
     width: 135px
     margin: 0 auto 22px
     padding: 8px 15px 5px
+
+    +tiny
+      width: 80px
 
 
 /* OBJECTS -> For styling objects */
@@ -85,7 +131,8 @@ nav
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .head 
-  .tickets
+  .tickets,
+  .tickets a
     +genhead($c: 40px)
     background-color: $orange
     color: $white
@@ -95,6 +142,11 @@ nav
 
     &:hover
       background-color: $grey
+
+    +tiny
+      color: $orange
+      background-color: $white
+      font-size: 0.4rem
 
 nav
   background-color: rgba(255, 96, 0, .9)
@@ -110,6 +162,9 @@ nav
     &:hover
       color: $black
 
+    +tiny
+      font-size: 1rem
+
   .sub
     +genhead($b: 0.7rem)
     color: $white
@@ -120,6 +175,9 @@ nav
       background-color: $white
       color: $black
       border-color: $black
+
+    +tiny
+      font-size: 0.5rem
 
 
 

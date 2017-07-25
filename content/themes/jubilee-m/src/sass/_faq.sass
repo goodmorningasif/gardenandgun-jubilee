@@ -1,0 +1,67 @@
+/*  _faq.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.qa
+  +width($c: 35px auto 0)
+  margin-bottom: 66px
+
+  +large
+    padding: 20px
+
+  > h2
+    margin-bottom: 40px
+
+  .answer
+    margin-top: 15px
+
+  .pair
+    margin-bottom: 40px
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.qa
+  > h2
+    +gentitle
+    
+  .block
+    -webkit-column-count:  2
+    -moz-column-count:  2
+    column-count:  2
+    -webkit-column-gap: 80px
+    -moz-column-gap: 80px
+    column-gap: 80px
+
+    +medium
+      -webkit-column-count:  1
+      -moz-column-count:  1
+      column-count:  1
+  .question
+    +gentag($a: 1.5rem)
+    color: $orange
+
+  .answer
+    +gencopy($a: 1.1rem, $b: 2em)
+
+  strong
+    +genhead($b: 1.2rem)
+
+  a
+    +genhead
+    color: $orange
+    border-bottom: 1px solid $orange
+    transition: 0.4s color ease
+
+    &:hover
+      color: black
+      border-bottom-color: $white
+
+  em
+    font-style: italic
+

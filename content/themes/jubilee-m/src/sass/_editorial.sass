@@ -7,6 +7,10 @@
 .editorial > *
   padding: 10px
 
+  +tiny
+    padding-left: 0
+    padding-right: 0
+
 .editorial  
   +width($c: 35px auto 0)
   margin-bottom: 66px
@@ -14,6 +18,9 @@
 
   .copy-normal
     flex: 0 0 66.66%
+
+    +medium
+      flex: 0 0 50%
 
     > p
       max-width: 550px
@@ -29,6 +36,9 @@
       width: 100%
       margin-top: 10px
 
+    +tiny
+      padding: 20px
+
 
   .image-wrapper
     > p
@@ -38,6 +48,12 @@
   flex: 0 0 33.33%
   position: relative
   overflow: hidden
+
+  +medium
+    flex: 0 0 50%
+
+  +tiny
+    flex: 0 0 100%
 
   &:hover
     .overlay
@@ -72,6 +88,16 @@
     padding: 30px
     transition: 0.4s opacity ease
 
+    +tiny
+      opacity: 1
+      position: relative
+      height: 100%
+      padding: 20px
+      margin: 0
+      width: 100%
+      top: 0
+      left: 0
+
 .section-header
   margin-top: 40px
   margin-bottom: 40px
@@ -87,6 +113,12 @@
     padding: 12px 20px 15px
 
 .calendar
+  flex: 0 0 100%
+
+  +tiny
+    // max-width: 300px
+    margin: 0 auto
+    padding: 20px
   
   .date:nth-of-type(n+2)
     h2
@@ -96,10 +128,41 @@
     margin-top: 20px
     margin-bottom: 20px
 
+    +tiny
+      margin-top: 30px
+      margin-bottom: 30px
+
   .time
     margin-top: 7px
     margin-bottom: 7px
 
+.copy-image
+  +flex
+
+  .text
+    flex: 0 0 33.33%
+    padding-right: 30px
+
+    +tiny
+      flex: 0 0 100%
+      max-width: 300px
+
+  .image-wrapper
+    flex:  0 0 66.66%
+
+    +tiny
+      flex: 0 0 100%
+
+    .image
+      width: 775px
+      height: 641px
+
+      +tiny
+        width: 100%
+        height: 250px
+
+    p 
+      padding: 0 20px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -112,9 +175,15 @@
     .headline
       +gentitle
 
+      +medium
+        font-size: 1.8rem
+
     > p,
     .text > p
       +gencopy($c: 0.03em)
+
+      +medium
+        font-size: 1rem
 
 
   .grid-wrapper
@@ -128,7 +197,11 @@
   .rollover
     +gencopy($a: 1rem)
     background-color: rgba(151, 143, 139, 0.7)
-    color: white
+    color: $white
+
+    +tiny
+      background-color: $grey
+      font-size: 0.7rem
 
   .section-header
 
@@ -152,15 +225,26 @@
     -moz-column-gap: 40px
     column-gap: 40px
 
+    +tiny
+      -webkit-column-count:  1
+      -moz-column-count:  1
+      column-count:  1
+
     .date
       h2
         +gentag($a: 1.5rem)
         color: $orange
 
+        +tiny
+          font-size: 1.8rem
+          line-height: 1.2em
+
     .item
       h3,
       .special
         +genhead($b: 1.05rem, $c: 1.5rem)
+
+
 
       .special
         color: $orange
@@ -182,20 +266,7 @@
           color: $black
           border-bottom-color: $white
 
-
 .copy-image
-  +flex
-
-  .text
-    flex: 0 0 33.33%
-    padding-right: 30px
-
   .image-wrapper
-    flex:  0 0 66.66%
-
-    .image
-      width: 775px
-      height: 641px
-
     p 
       +genhead($b: 0.7rem)
