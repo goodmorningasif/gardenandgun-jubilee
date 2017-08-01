@@ -41,12 +41,14 @@
 
     +tiny
       padding: 20px
-
+  
+  .copy-full
+    margin-bottom: 30px
 
   .image-wrapper
     > p
       margin-top: 15px
-
+   
 .grid-wrapper
   flex: 0 0 33.33%
   position: relative
@@ -140,6 +142,9 @@
       margin-top: 30px
       margin-bottom: 30px
 
+    p
+      margin-bottom: 8px
+
   .time
     margin-top: 7px
     margin-bottom: 7px
@@ -160,7 +165,7 @@
       padding-bottom: 30px
 
   .image-wrapper
-    flex:  0 0 66.66%
+    flex:  0 0 64.5%
 
     +large
       flex: 0 0 50%
@@ -187,7 +192,7 @@
 
   +medium
     display: block
-    margin: 0 auto
+    margin: 0 auto 20px
 
   .header
     padding: 10px
@@ -252,7 +257,7 @@
 
 
     p
-      +gencopy($a: 1rem)
+      +gencopy($a: 1rem, $b: 1.6em)
       color: $white
 
       +medium

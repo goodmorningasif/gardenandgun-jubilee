@@ -80,7 +80,8 @@
       +tiny
         display: none
 
-.page-template-tmpl_editorial
+.page-template-tmpl_editorial,
+.page-template-tmpl_faq
   .info
     margin: 0
     .left,
@@ -90,6 +91,9 @@
     .middle
       flex: 0 0 100%
       padding: 20px
+
+      +tiny
+        padding: 10px
 
       h2
         display: none
@@ -122,7 +126,7 @@
       font-size: 2rem
       font-family: $brandon
       color: $white
-      letter-spacing: 0.25rem
+      letter-spacing: 0.25em
       text-transform: uppercase
 
       +large
@@ -136,7 +140,8 @@
       color: $white
       line-height: 1.4rem
 
-.page-template-tmpl_editorial
+.page-template-tmpl_editorial,
+.page-template-tmpl_faq
   .info
     .middle
       background-color: $white
@@ -144,3 +149,8 @@
       h3
         color: $black
         font-size: 1rem
+
+        +tiny
+          font-size: 0.6rem
+
+
