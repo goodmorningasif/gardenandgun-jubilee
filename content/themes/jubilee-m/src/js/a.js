@@ -10,11 +10,14 @@ $j(document).ready(function(){
 
   // handle menu toggling
 	$j('.hamburger').on('click', function(){
-		console.log('clicked');
 		if( $j('nav').hasClass('toggle-nav') ){
 			$j('nav').removeClass('toggle-nav');
+			$j('nav').find('.main').removeClass('triggerSub');
+			$j('nav').find('.sub').removeClass('triggerSub');
 		} else {
       $j('nav').addClass('toggle-nav');
+      $j('nav').find('.main').addClass('triggerSub');
+      $j('nav').find('.sub').addClass('triggerSub');
 		}
 	});
 
@@ -26,8 +29,16 @@ $j(document).ready(function(){
     $j('.next').addClass('toggle-opacity');
 	}
 
-
-
+  // Add smooth scrollling to hash links
+  $j('a').on('click', function(e){
+  	var hash = this.hash;
+  	if (hash !== "") {
+	  	e.preventDefault();
+	    anchorScroll(hash);
+	    $j(this).closest('.calendar-headers').find('.header').removeClass('toggle-anchor');
+	    $j(this).closest('.header').addClass('toggle-anchor');
+  	}
+  });
 
 
 });

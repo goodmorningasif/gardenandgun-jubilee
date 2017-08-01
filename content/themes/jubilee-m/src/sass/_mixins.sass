@@ -12,6 +12,10 @@
   @media(max-width: #{650px})
     @content
     
+=break($a, $b: max-width)  
+  @media($b: #{$a})
+    @content
+
 
 /* Flexbox */
 =flex($a: flex, $b: space-between, $c: flex-start, $d: wrap)
@@ -44,3 +48,14 @@
     @content
   &:-ms-input-placeholder
     @content
+
+/* Keyframes */
+=keyframes($a)
+  @-webkit-keyframes #{$a}
+    @content  
+  @-moz-keyframes #{$a}
+    @content  
+  @-ms-keyframes #{$a}
+    @content  
+  @keyframes #{$a}
+    @content  

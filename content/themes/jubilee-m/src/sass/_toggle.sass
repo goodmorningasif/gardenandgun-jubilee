@@ -5,3 +5,60 @@ body .toggle-nav
 body .toggle-opacity
   opacity: 1
 
+body .toggle-anchor
+    background-color: $orange
+
+    h2 a
+      color: $white
+
++keyframes(mainFadeInLeft)
+  0%
+    opacity: 0
+    -webkit-transform: translateY(-20px)
+    -ms-transform: translateX(-20px)
+    transform: translateX(-20px)
+
+  100% 
+    opacity: 1
+    -webkit-transform: translateX(0)
+    -ms-transform: translateX(0)
+    transform: translateX(0)
+
+body .triggerMain
+  -webkit-animation: mainFadeInLeft 1.5s normal; 
+  -moz-animation: mainFadeInLeft 1.5s normal; 
+  -o-animation: mainFadeInLeft 1.5s normal; 
+  animation: mainFadeInLeft 1.5s normal; 
+  animation-fill-mode: forwards
+  -webkit-animation-fill-mode: forwards
+
+
+@for $i from 1 to 40
+  $num: $i/5
+  nav .main_menu a:nth-of-type(#{$i}))
+    .triggerMain
+      animation-delay: #{$num}s
+      -webkit-animation-delay: #{$num}s
+
++keyframes(subFadeInUp)
+  0%
+    opacity: 0
+    -webkit-transform: translateY(10px)
+    -ms-transform: translateY(10px)
+    transform: translateY(10px)
+
+  100% 
+    opacity: 1
+    -webkit-transform: translateY(0)
+    -ms-transform: translateY(0)
+    transform: translateY(0)
+
+body .triggerSub
+  -webkit-animation: subFadeInUp 1.5s normal; 
+  -moz-animation: subFadeInUp 1.5s normal; 
+  -o-animation: subFadeInUp 1.5s normal; 
+  animation: subFadeInUp 1.5s normal; 
+  animation-fill-mode: forwards
+  -webkit-animation-fill-mode: forwards
+  animation-delay: 1s
+  -webkit-animation-delay: 1s

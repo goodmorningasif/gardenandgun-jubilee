@@ -74,6 +74,12 @@ if(have_rows('edit_flexible', $page_ID)) :
 				  	$thisData = array(
 				  		'date' => get_sub_field('day'),
 				  	);
+            foreach($thisData as $entry) :
+              $expEntry = explode(' ', $entry);
+              $firstItem = $expEntry[0];
+              $firstItem = str_replace(',', '', $firstItem);
+              $thisData['anchor'] = $firstItem;
+            endforeach;
 				    array_push($data['page']['layouts']['calendar'], $thisData);
 			    endif;
 
@@ -98,7 +104,7 @@ echo $compiler->render('tmpl_editorial', $data);
 
 // echo '=========================';
 // echo '<pre>';
-// print_r($data['page']['layouts']);
+// print_r($data['page']['layouts']['calendar']);
 // echo '</pre>';
 
 ?>

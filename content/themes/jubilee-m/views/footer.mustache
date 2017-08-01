@@ -3,11 +3,16 @@
 {{{wp_footer}}}
 
 <script>
+
+	var afterAnimate = function() {
+	}
+
 wow = new WOW( {
     boxClass:     'wow',
     animateClass: 'animated',
-    offset:       200
-    }
+    offset:       200,
+    callback: afterAnimate,
+  }
 );
 
 wow.init();

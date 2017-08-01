@@ -22,6 +22,9 @@
     +medium
       flex: 0 0 50%
 
+    +tiny
+      flex: 0 0 100%
+
     > p
       max-width: 550px
 
@@ -92,11 +95,16 @@
       opacity: 1
       position: relative
       height: 100%
-      padding: 20px
+      padding: 20px 20px 50px
       margin: 0
       width: 100%
       top: 0
       left: 0
+
+    a
+      position: absolute
+      bottom: 10px
+      right: 20px
 
 .section-header
   margin-top: 40px
@@ -125,8 +133,8 @@
       margin-top: 30px
 
   .item
-    margin-top: 20px
-    margin-bottom: 20px
+    margin-top: 25px
+    margin-bottom: 50px
 
     +tiny
       margin-top: 30px
@@ -138,31 +146,59 @@
 
 .copy-image
   +flex
+  margin-bottom: 40px
 
   .text
     flex: 0 0 33.33%
     padding-right: 30px
 
-    +tiny
+    +large
+      flex: 0 0 50%
+
+    +medium
       flex: 0 0 100%
-      max-width: 300px
+      padding-bottom: 30px
 
   .image-wrapper
     flex:  0 0 66.66%
 
-    +tiny
+    +large
+      flex: 0 0 50%
+
+    +medium
       flex: 0 0 100%
 
     .image
       width: 775px
       height: 641px
 
+      +medium
+        width: 100%
+
       +tiny
         width: 100%
         height: 250px
 
     p 
-      padding: 0 20px
+      // padding: 0 20px 0 0
+
+.calendar-headers
+  display: none
+
+  +medium
+    display: block
+    margin: 0 auto
+
+  .header
+    padding: 10px
+    width: 90px
+    height: 37px
+    display: inline-block
+    overflow: hidden
+    margin-left: -5px
+
+
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -192,16 +228,40 @@
 
       h3
         +genhead($c: 1rem)
+        line-height: 1.4em
         color: $white
 
   .rollover
-    +gencopy($a: 1rem)
     background-color: rgba(151, 143, 139, 0.7)
-    color: $white
 
-    +tiny
+    +medium
       background-color: $grey
-      font-size: 0.7rem
+
+
+    h3
+      +genhead
+      color: $white
+
+    a
+      +genhead($b: 0.7rem)
+      color: $white
+      transition: 0.4s color
+
+      &:hover
+        color: $black
+
+
+    p
+      +gencopy($a: 1rem)
+      color: $white
+
+      +medium
+        font-size: 0.8rem
+
+      +tiny
+        // background-color: $grey
+        font-size: 0.7rem
+
 
   .section-header
 
@@ -221,9 +281,9 @@
     -webkit-column-count:  3
     -moz-column-count:  3
     column-count:  3
-    -webkit-column-gap: 40px
-    -moz-column-gap: 40px
-    column-gap: 40px
+    -webkit-column-gap: 80px
+    -moz-column-gap: 80px
+    column-gap: 80px
 
     +tiny
       -webkit-column-count:  1
@@ -244,8 +304,6 @@
       .special
         +genhead($b: 1.05rem, $c: 1.5rem)
 
-
-
       .special
         color: $orange
 
@@ -253,7 +311,7 @@
         +gentag
       
       > p 
-        +gencopy($a: 1.1rem, $b: 2em)
+        +gencopy($a: 1.1rem, $b: 1.8em)
 
 
       > a
@@ -270,3 +328,15 @@
   .image-wrapper
     p 
       +genhead($b: 0.7rem)
+
+.calendar-headers
+  h2,
+  h2 a
+    +genhead($b: 0.7rem)
+    color: $orange
+    text-align: center
+    transition: 0.4s color
+
+  .header 
+    border: 1px solid $orange
+    transition: 0.4s background-color

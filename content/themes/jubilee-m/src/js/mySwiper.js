@@ -1,3 +1,11 @@
+/*
+*
+* Custom Swiper Configuration
+*
+* See: https://codepen.io/udovichenko/pen/LGeQae
+*
+*/
+
 var interleaveOffset = -.5;
 
 var interleaveEffect = {

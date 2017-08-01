@@ -84,7 +84,7 @@ nav
     padding-top: 10px
     position: absolute
     top: 15px
-    left: 10px
+    left: 0
 
     svg
       width: 36px
@@ -138,22 +138,36 @@ nav
     color: $white
     text-align: center
     white-space: nowrap
-    transition: 0.15s all ease
-
-    &:hover
-      background-color: $grey
-
+    transition: 0.4s all ease
+    
     +tiny
       color: $orange
       background-color: $white
       font-size: 0.4rem
 
+  .tickets 
+    &:hover
+      background-color: $grey
+
+      a
+        background-color: $grey
+
+  .hamburger
+    cursor: pointer
+    .cls-1
+      transition: 0.4s stroke
+
+    &:hover
+      .cls-1
+        stroke: $grey
+
+
 nav
   background-color: rgba(255, 96, 0, .9)
   opacity: 0.1
 
-
   .main
+    opacity: 0
     +gentag($a: 2rem)
     letter-spacing: 0.05em
     color: $white
@@ -166,6 +180,7 @@ nav
       font-size: 1rem
 
   .sub
+    opacity: 0
     +genhead($b: 0.7rem)
     color: $white
     border: 1px solid $white
@@ -179,5 +194,10 @@ nav
     +tiny
       font-size: 0.5rem
 
+
+
+.nav-wrapper
+  .hamburger
+    cursor: pointer
 
 

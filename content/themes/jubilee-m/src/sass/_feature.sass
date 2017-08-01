@@ -14,6 +14,10 @@
   margin-top: 30px
   margin-bottom: 30px
 
+  +medium
+    margin-top: 20px
+    margin-bottom: 20px
+
   .sectional
 
   .headline
@@ -30,21 +34,26 @@
   .image-wrapper
     flex: 0 0 50%
 
-    +tiny
+    +medium
       flex: 0 0 100%
+
+  .copy
+    +large
+      padding: 20px
 
   .image-wrapper
     .image
       width: 100%
       height: 386px
 
-      +tiny
-        height: 250px
+
+      +medium
+        height: 331px
 
   .copy
     padding-right: 11%
 
-    +tiny
+    +break($a: 1125px)
       padding: 20px
 
 .img-to-copy-layout
@@ -52,22 +61,22 @@
   .image-wrapper
     flex: 0 0 63%
 
-    +tiny
+    +medium
       flex: 0 0 100%
 
     .image
       width: 780px
       height: 520px
 
-      +tiny
+      +medium
         width: 100%
-        height: 250px
+        height: 331px
 
   .copy
     flex: 0 0 36%
     padding-left: 55px
 
-    +tiny
+    +medium
       flex: 0 0 100%
       padding: 20px
 
@@ -78,7 +87,7 @@
         width: 40px
         height: 90px
 
-        +tiny
+        +medium
           height: 40px
           width: 40px
       
@@ -95,98 +104,165 @@
   margin-top: 30px
   margin-bottom: 30px
 
+  +medium
+    margin-top: 20px
+    margin-bottom: 20px
+
   .left-col
     flex: 0 0 33.33%
+    padding-right: 10px
 
-    +tiny
+    +medium
+      +flex
       flex: 0 0 100%
+      padding-right: 0
+      padding-bottom: 20px
 
-    .image
-      width: 397px
-      height: 772px
+    .image-wrapper,
+    .left-copy
+      +medium
+        flex: 0 0 50%
 
       +tiny
+        flex: 0 0 100%
+
+    .k
+
+    .image
+      width: 100%
+      height: 772px
+
+      +medium
         width: 100%
-        height: 250px
+        height: 331px
 
   .middle-right-col
     flex: 0 0 66.66%
 
-    +tiny
+    +medium
       flex: 0 0 100%
 
   .image-row
     +flex
 
     .image-wrapper
-      flex: 0 0 50%
+      flex: 0 0 49.4%
+
+      +medium
+        flex: 0 0 48.8%
 
       +tiny
         flex: 0 0 100%
         margin-bottom: 30px
 
       .image
-        width: 397px
+        width: 100%
         height: 456px
 
-        +tiny
+        +medium
           width: 100%
-          height: 250px
+          height: 331px
+
 
   .left-copy
     max-width: 329px
     margin: 60px auto 0
 
+    +large
+      max-width: 100%
+      padding: 20px
+
+    +medium
+      margin-top: 0
+      padding-top: 0
+
     +tiny
-      margin-top: 10px
+      padding-top: 20px
 
   p
     strong
       display: block
 
     +tiny
-     padding: 20px
+     // padding: 20px
 
   .cta
     +flex
-    padding-top: 50px
+    padding-top: 30px
+
+    +break($a: 1125px)
+      width: 459px
+      margin: 0 auto
+      padding-top: 20px
+
+    +medium
+      padding-top: 20px
+      padding-bottom: 10px
 
     +tiny
       padding-top: 0
       padding-bottom: 10px
+      width: 270px
+      margin-top: -15px
 
     .cta-icon
       flex: 0 0 190px
+      height: 65px
+
+      +break($a: 1125px)
+        flex: 0 0 100px
+        display: flex
+        justify-content: center
+        align-items: center
 
       +tiny
-        flex: 0 0 10%
+        flex: 0 0 60px
 
       svg
+        width: 190px
+        height: 60px
+
+        +break($a: 1125px)
+          width: 100px
+          height: 32px
+
         +tiny
           width: 60px
-          height: 20
+          height: 20px
 
     .cta-text
       flex: 1 0 auto
       padding: 0 15px 0 40px
 
+      +break($a: 1125px)
+        flex: 0 0 339px
+        padding: 0
+
       +tiny
-        flex: 0 0 80%
-        padding: 0 15px
+        flex: 0 0 190px
+        // padding: 0 15px
 
       svg
+        width: 480px
+        height: 53px
+
+        +break($a: 1125px)
+          width: 339px
+          height: 38px
+
         +tiny
-          width: 200px
+          width: 190px
+          height: 38px
 
 .middle-right-col
   > .image-wrapper
     .image
-      width: 807px
+      width: 100%
       height: 537px
 
-      +tiny
+      +medium
         width: 100%
-        height: 250px
+        height: 331px
 
 
 .tagline-mobile
@@ -216,7 +292,10 @@
   .headline
     +gentitle
 
-    +tiny
+    +large
+      font-size: 2.2rem
+
+    +medium
         font-size: 1.8rem
 
     em
@@ -225,19 +304,24 @@
   .para
     +gencopy
 
-    +tiny
+    +large
+      font-size: 1.2rem
+
+    +medium
         font-size: 1rem
 
 .three-col-layout
   p
     +gencopy
-    +tiny
+
+    +medium
         font-size: 1rem
 
     strong
       +gentag($a: 2.5rem)
       line-height: 1.4em
-      +tiny
+
+      +medium
         font-size: 1.4rem
 
 
@@ -246,9 +330,14 @@
   .text
     +genhead($b: 1.8rem)
     color: $black
+    transition: 0.4s color
 
-    +tiny
+    +medium
       font-size: 1rem
+
+    &:hover
+      color: $orange
+
 
 
 .tagline-mobile

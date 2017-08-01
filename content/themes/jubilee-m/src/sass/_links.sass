@@ -19,27 +19,31 @@
   .gg
     flex: 0 0 25%
 
+    +large
+      flex: 0 0 150px
+
     +medium
       flex: 0 0 100%
 
   .menu
     flex: 0 0 50%
 
+    +large
+      flex: 1 0 auto
+
     +medium
-       flex: 0 0 100%
+      flex: 0 0 100%
+      padding: 10px
+
 
 
 .menu
   +flex
 
-  +tiny
-    margin-top: 20px
-    margin-bottom: 20px
-
   .item,
-    flex: 0 0 auto
+    flex: 0 0 150px
 
-    +medium
+    +tiny
       flex: 0 0 100%
 
   .social_media
@@ -47,15 +51,23 @@
     +flex
 
     +medium
-      margin: 0 auto
+      flex: 0 0 100px
+      margin: 10px auto
 
     .item
       flex: 0 0 30px
+
+      +medium
+        flex: 0 0 20px
 
 
     .item svg
       width: 30px
       height: 30px
+
+      +medium
+        width: 20px
+        height: 20px
 
     .item:last-of-type
       flex: 0 0 100%
@@ -76,9 +88,14 @@
   .gg span,
     +genhead($b: 0.35rem)
     color: $orange
+    transition: 0.4s color
 
     +medium
       text-align: center
+
+  .sdco a
+    &:hover
+      color: $black
 
   .sdco,
   .gg
@@ -95,6 +112,7 @@
   .item a
     +genhead
     color: $black
+    transition: 0.4s color
 
     &:hover
       color: $orange
@@ -103,7 +121,15 @@
       text-align: center
       font-size: 0.8rem
 
+    +tiny
+      font-size: 1rem
+
+    &:hover
+      color: $orange
+
 .social_media
+  a svg path
+    transition: 0.4s fill
   .item
     &:hover
       a svg path
@@ -112,6 +138,9 @@
   h4
     +genhead($b: 1.1rem, $d: 0.3em)
     color: $orange
+
+    +medium
+      font-size: 0.7rem
 
 
 

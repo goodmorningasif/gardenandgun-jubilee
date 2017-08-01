@@ -1,6 +1,7 @@
 <?php 
 
 /* BASE Assets */
+$body_fadeIn = array("wow", "fadeIn");
 $data = array(
 	'wp_title' => wp_title('', false, 'right'),
 	'wp_head' => output_buffer_contents(wp_head),
@@ -10,7 +11,7 @@ $data = array(
 	'home_url' => esc_url( home_url('/')),
 	'blog_title' => get_bloginfo('name', 1),
 	'charset' => get_bloginfo('charset'),
-	'body_class' => output_buffer_contents(body_class),
+	'body_class' => output_buffer_contents(body_class, $body_fadeIn),
 	'pages' => get_pages(),
 	'categories' => get_categories('show_count=0&title_li=&hide_empty=0&exclude=1'),
 );
@@ -28,6 +29,7 @@ foreach($data['categories'] as $category) {
 $data['assets']['svg'] = array(
   'logo_main' => file_get_contents($GLOBALS['url'].'/assets/svg/logo-main.svg'),
   'hamburger' => file_get_contents($GLOBALS['url'].'/assets/svg/hamburger.svg'),
+  'close' => file_get_contents($GLOBALS['url'].'/assets/svg/close.svg'),
 );
 
 
