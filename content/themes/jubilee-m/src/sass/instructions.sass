@@ -1,0 +1,117 @@
+/*  _instructions.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.instructions 
+  +width($c: 35px auto 0)
+  margin-bottom: 66px
+
+  .image-copy
+    +flex
+    margin-bottom: 140px
+
+    .image,
+    .copy
+      flex: 0 0 50%
+
+      +tiny
+        flex: 0 0 100%
+
+    .copy
+      padding-left: 50px
+      padding-right: 25px
+      padding-top: 50px
+
+      +tiny
+        padding-left: 25px
+        padding-right: 25px
+
+    .image
+      height: 100%
+      min-height: 550px
+      padding: 25px
+
+  
+  .copy-only
+    +flex($b: center)
+
+    .copy
+      flex: 0 0 60%
+      padding-top: 50px
+      padding-bottom: 50px
+
+      +tiny
+        flex: 0 0 100%
+        padding-left: 25px
+        padding-right: 25px
+
+
+  h3
+    margin-bottom: 10px
+
+  h4
+    padding: 25px
+
+  .ilinks
+    a
+      padding: 13px 15px 10px
+  
+  p
+    padding-top: 10px
+    padding-bottom: 25px
+
+    img
+      width: initial
+      margin: 0 auto
+      display: block
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+
+.instructions
+  h3
+    +gentitle
+
+  h4
+    +gentag($a: 1.5rem)
+    color: $orange
+    text-align: center
+
+  p
+    +gencopy($a: 1.1rem)
+
+
+  .image
+    overflow: hidden
+    background-color: $litegrey
+
+    img
+      -webkit-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.07)
+      -moz-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.07)
+      box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.07)
+  
+  b
+    +genhead($b: 1rem, $c: 1.5rem)
+    color: $orange
+
+  i
+    +gentag($a: 1.15rem)
+
+  .ilinks
+    a
+      +genhead($c: 1em)
+      background-color: $orange
+      color: $white
+      transition: 0.4s background-color
+
+      &:hover
+        background-color: $grey
+
+  .copy-only
+    text-align: center
+

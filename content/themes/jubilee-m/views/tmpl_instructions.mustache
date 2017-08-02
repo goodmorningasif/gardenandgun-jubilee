@@ -1,0 +1,26 @@
+{{> header}}
+
+<!-- === SECTION: INSTRUCTIONS === -->
+<section class="instructions">
+{{# page.inst}}
+  {{# image}}
+    <div class="image-copy">
+      <div class="image">
+        <img src="{{image.url}}" class="screenshot">
+      </div>
+      <div class='copy'>
+        {{{copy}}}
+      </div>
+    </div>
+  {{/ image}}
+  {{^ image}}
+    <div class="copy-only">
+	    <div class='copy'>
+        {{{copy}}}
+      </div>
+    </div>
+  {{/ image}}
+{{/ page.inst}}
+</section>
+
+{{> footer}}
