@@ -3,10 +3,22 @@
 </h3>
 	<div class="partners">
 	{{# assets.partners}}
-	  <div class="partner">
+	  <div class="partner desktop">
 	    <a href="{{link}}" target="_blank" >
  			  <img src="{{img.url}}" alt="{{img.alt}}"
  			    width="{{img.width}}" height="{{img.height}}">
+			  </a>
+	  </div>
+	  <div class="partner tablet">
+	    <a href="{{link}}" target="_blank" >
+ 			  <img src="{{img.sizes.medium}}" alt="{{img.alt}}"
+ 			    width="{{img.sizes.medium-width}}" height="{{img.sizes.medium-height}}">
+			  </a>
+	  </div>
+	  <div class="partner mobile">
+	    <a href="{{link}}" target="_blank" >
+ 			  <img src="{{img.sizes.thumbnail}}" alt="{{img.alt}}"
+ 			    width="{{img.sizes.thumbnail-width}}" height="{{img.sizes.thumbnail-height}}">
 			  </a>
 	  </div>
 	{{/ assets.partners}}

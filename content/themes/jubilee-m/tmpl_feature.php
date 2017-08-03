@@ -97,7 +97,7 @@ echo $compiler->render('tmpl_feature', $data);
 
 // echo '=========================';
 // echo '<pre>';
-// print_r($data['assets']['nav']);
+// print_r($data['assets']['partners']);
 // echo '</pre>';
 
 ?>
