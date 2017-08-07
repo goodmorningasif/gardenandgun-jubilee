@@ -17,6 +17,10 @@ $data['page']['layouts']['edit_copy'] = array();
 $data['page']['layouts']['edit_image-grid'] = array();
 $data['page']['layouts']['edit_sec-head'] = array();
 $data['page']['layouts']['calendar'] = array();
+$data['page']['layouts']['calendar']['day1'] = array();
+$data['page']['layouts']['calendar']['day2'] = array();
+$data['page']['layouts']['calendar']['day3'] = array();
+$data['page']['layouts']['calendar']['anchors'] = array();
 
 // Layouts
 if(have_rows('edit_flexible', $page_ID)) :
@@ -66,8 +70,8 @@ if(have_rows('edit_flexible', $page_ID)) :
   endif;
   
   if(get_row_layout() === 'calendar') :
-  	if(have_rows('content', $page_ID)):
-  		while(have_rows('content', $page_ID)):
+  	if(have_rows('calendar_day1', $page_ID)):
+  		while(have_rows('calendar_day1', $page_ID)):
   			the_row();
 
   		    if(get_row_layout() === 'calendar_day') :
@@ -80,7 +84,8 @@ if(have_rows('edit_flexible', $page_ID)) :
               $firstItem = str_replace(',', '', $firstItem);
               $thisData['anchor'] = $firstItem;
             endforeach;
-				    array_push($data['page']['layouts']['calendar'], $thisData);
+				    array_push($data['page']['layouts']['calendar']['day1'], $thisData);
+            array_push($data['page']['layouts']['calendar']['anchors'], $thisData);
 			    endif;
 
   		    if(get_row_layout() === 'calendar_item') :
@@ -92,10 +97,74 @@ if(have_rows('edit_flexible', $page_ID)) :
               'link_title' => get_sub_field('link_title'),
               'link' => get_sub_field('link'),
 				  	);
-				    array_push($data['page']['layouts']['calendar'], $thisData);
+				    array_push($data['page']['layouts']['calendar']['day1'], $thisData);
 			    endif;
 
   	endwhile; endif;
+
+    if(have_rows('calendar_day2', $page_ID)):
+      while(have_rows('calendar_day2', $page_ID)):
+        the_row();
+
+          if(get_row_layout() === 'calendar_day') :
+            $thisData = array(
+              'date' => get_sub_field('day'),
+            );
+            foreach($thisData as $entry) :
+              $expEntry = explode(' ', $entry);
+              $firstItem = $expEntry[0];
+              $firstItem = str_replace(',', '', $firstItem);
+              $thisData['anchor'] = $firstItem;
+            endforeach;
+            array_push($data['page']['layouts']['calendar']['day2'], $thisData);
+            array_push($data['page']['layouts']['calendar']['anchors'], $thisData);
+          endif;
+
+          if(get_row_layout() === 'calendar_item') :
+            $thisData = array(
+              'special' => get_sub_field('special_programming'),
+              'headline' => get_sub_field('headline'),
+              'time' => get_sub_field('time'),
+              'description' => get_sub_field('description'),
+              'link_title' => get_sub_field('link_title'),
+              'link' => get_sub_field('link'),
+            );
+            array_push($data['page']['layouts']['calendar']['day2'], $thisData);
+          endif;
+
+    endwhile; endif;
+
+    if(have_rows('calendar_day3', $page_ID)):
+      while(have_rows('calendar_day3', $page_ID)):
+        the_row();
+
+          if(get_row_layout() === 'calendar_day') :
+            $thisData = array(
+              'date' => get_sub_field('day'),
+            );
+            foreach($thisData as $entry) :
+              $expEntry = explode(' ', $entry);
+              $firstItem = $expEntry[0];
+              $firstItem = str_replace(',', '', $firstItem);
+              $thisData['anchor'] = $firstItem;
+            endforeach;
+            array_push($data['page']['layouts']['calendar']['day3'], $thisData);
+            array_push($data['page']['layouts']['calendar']['anchors'], $thisData);
+          endif;
+
+          if(get_row_layout() === 'calendar_item') :
+            $thisData = array(
+              'special' => get_sub_field('special_programming'),
+              'headline' => get_sub_field('headline'),
+              'time' => get_sub_field('time'),
+              'description' => get_sub_field('description'),
+              'link_title' => get_sub_field('link_title'),
+              'link' => get_sub_field('link'),
+            );
+            array_push($data['page']['layouts']['calendar']['day3'], $thisData);
+          endif;
+
+    endwhile; endif;
   endif;
 
 endwhile;endif;
@@ -104,7 +173,7 @@ echo $compiler->render('tmpl_editorial', $data);
 
 // echo '=========================';
 // echo '<pre>';
-// print_r($data['page']['layouts']['calendar']);
+// print_r($data['page']['layouts']['calendar']['anchors']);
 // echo '</pre>';
 
 ?>

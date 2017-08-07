@@ -37,6 +37,12 @@
     +medium
       flex: 0 0 100%
 
+    +browser(Trident)
+      flex: 0 0 44%
+
+      +medium
+        flex: 0 0 100%
+        
   .copy
     +large
       padding: 20px
@@ -64,6 +70,9 @@
     +medium
       flex: 0 0 100%
 
+    +browser(Trident)
+      flex: 0 0 60%
+
     .image
       width: 780px
       height: 520px
@@ -79,6 +88,9 @@
     +medium
       flex: 0 0 100%
       padding: 20px
+
+    +browser(Trident)
+      flex: 0 0 34%
 
     .icon
       display: inline-block
@@ -118,6 +130,15 @@
       padding-right: 0
       padding-bottom: 20px
 
+    +browser(Trident)
+      flex: 0 0 33%
+
+      +medium
+        +flex
+        flex: 0 0 100%
+        padding-right: 0
+        padding-bottom: 20px
+
     .image-wrapper,
     .left-copy
       +medium
@@ -141,6 +162,13 @@
 
     +medium
       flex: 0 0 100%
+
+    +browser(Trident)
+      flex: 0 0 66%
+
+      +medium
+        flex: 0 0 100%
+
 
   .image-row
     +flex

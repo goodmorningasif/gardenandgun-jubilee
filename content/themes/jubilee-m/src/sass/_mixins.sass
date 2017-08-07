@@ -19,9 +19,23 @@
 
 /* Flexbox */
 =flex($a: flex, $b: space-between, $c: flex-start, $d: wrap)
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
   display: $a
+  -webkit-justify-content: $b
+  -moz-justify-content: $b
+  -ms-justify-content: $b
   justify-content: $b
+  -ms-flex-pack: $b
+  -webkit-align-items: $c;
+  -moz-align-items: $c;
+  -ms-align-items: $c;
   align-items: $c
+  -webkit-flex-wrap: $d
+  -moz-flex-wrap: $d
+  -ms-flex-wrap: $d
   flex-wrap: $d
 
 /* Background Image Settings */

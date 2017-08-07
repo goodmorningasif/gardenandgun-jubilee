@@ -11,8 +11,20 @@
   {{> tmpl_editorial/calendar-headers}}
   <div class="calendar wow fadeIn"
   data-wow-duration="1s" >
-  {{# calendar}}
+  <div class="day1">
+  {{# calendar.day1}}
     {{> tmpl_editorial/calendar}}
-  {{/ calendar}}
+  {{/ calendar.day1}}
+  </div>
+  <div class="day2">
+  {{# calendar.day2}}
+    {{> tmpl_editorial/calendar}}
+  {{/ calendar.day2}}
+  </div>
+  <div class="day3">
+  {{# calendar.day3}}
+    {{> tmpl_editorial/calendar}}
+  {{/ calendar.day3}}
+  </div>
   </div>
 {{/ page.layouts}}
