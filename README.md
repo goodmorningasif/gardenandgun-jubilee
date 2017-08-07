@@ -24,35 +24,37 @@ Copyright 2017 SDCO Partners
 ### Folder Structer
 
 ```
-|--/jubilee/
+|--/jubilee-m/
 |  |
 |  |--/assets/
-|  |
-|  |--/components/
 |  |
 |  |--/prod/
 |  |  └-- script.js
 |  |  └-- styles.css
 |  |
 |  |--/src/
-|  |  | 
-|  |  |--/js/
-|  |  |  └-- a.js
-|  |  |
-|  |  |--/sass/
-|  |  |  └-- _mixins.sass
-|  |  |  └-- _reset.sass
-|  |  |  └-- _variables.sass
-|  |  |  └-- styles.sass
-|  |  | 
+|  |  └-- /js/
+|  |  └-- /sass/
+|  |   
+|  |--/views/
+|  |  └-- /foot/
+|  |  └-- /head/
+|  |  └-- /tmpl_editorial/
+|  |  └-- /tmpl_faq/
+|  |  └-- /tmpl_feature/
+|  |
 └-- 404.php
+└-- compiler.php
 └-- config.php
-└-- footer.php
-└-- function.php
-└-- header.php
+└-- functions.php
 └-- index.php
-└-- sidebar.php
-└-- README.txt
+└-- page.php
+└-- single.php
+└-- store.php
+└-- tmpl_editorial.php
+└-- tmpl_faq.php
+└-- tmpl_featuer.php
+└-- tmpl_instructions.php
 └-- style.css 
 ```
 
@@ -156,6 +158,30 @@ For All other files ...
   * Git commit and git push to server
 
 ### Feature Documentation
+
+#### Mustache Template 
+
+This theme uses Mustache templating and requires a little bit of reading to get up-to-speed:
+
+* https://github.com/bobthecow/mustache.php/wiki
+* https://github.com/cjonasw/wordpress-starter-theme-mustache
+
+The goal of this project was to separate logic-driven code from your display/templating code, or in the traditional sense separating `views` from `models`. The pros and cons of this is well documented but is too much of a rabit-hole to include here.
+
+Mustache is a logic-less templating language which helps force this separation of `views` and `models`. At it's basest level, think of Mustache like HTML: HTML lays down the underlying architecture of a page and nothing else. Mustache gives HTML just enough PHP to utilize variables/data. To utilize a Mustache template, simply feed in the variables/data for that page:
+
+`DATA -> MUSTACHE TEMPALATE = LIVE PAGE`
+
+`compiler.php` initiates the Mustache Engine and specifies where to find the `.mustache` files. 
+
+`store.php` is the initial data array that all pages utilize. 
+
+Individual pages then include `compiler.php` and `store.php`, add any further page-specific data to that data array, then renders the page utilizing the page's `.mustache` template file. 
+
+Going back to the separation of `views` and `models`, the `/views/` folder is obviously the logic-less template files, while (not as obvious) `store.php` and data portions of the individual page files are the models. 
+
+What do you do if you need to add logic to part of a page? If any calculations need to happen, make them on the page's `.php` file, and feed that data through to the `.mustache` file. Reference bobthecow's Mustache wiki on the correct syntax to use to display that data. 
+
 
 
 ## Known Bugs
