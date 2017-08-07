@@ -170,7 +170,7 @@ The goal of this project was to separate logic-driven code from your display/tem
 
 Mustache is a logic-less templating language which helps force this separation of `views` and `models`. At it's basest level, think of Mustache like HTML: HTML lays down the underlying architecture of a page and nothing else. Mustache gives HTML just enough PHP to utilize variables/data. To utilize a Mustache template, simply feed in the variables/data for that page:
 
-`DATA -> MUSTACHE TEMPALATE = LIVE PAGE`
+`DATA -> MUSTACHE TEMPLATE = LIVE PAGE`
 
 `compiler.php` initiates the Mustache Engine and specifies where to find the `.mustache` files. 
 
