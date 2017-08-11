@@ -16,17 +16,20 @@
 
   +tiny
     max-width: 300px
+    margin-top: 40px
 
   .partners
 
   .partner
 
     +tiny
-      flex: 0 0 auto
-      margin: 0 auto
+      flex: 0 0 100%
+      margin: 5px auto
 
     img 
       width: initial
+      display: block
+      margin: 0 auto
   
   .desktop
     +large
@@ -34,13 +37,14 @@
 
   .tablet
     +tiny
-      display: none
+      // display: none
 
     +break($b: min-width, $a: 1225px)
       display: none
 
   .mobile
-    +break($b: min-width, $a: 650px)
+    display: none
+    // +break($b: min-width, $a: 650px)
       display: none
 
 

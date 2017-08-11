@@ -30,7 +30,7 @@ $j(document).ready(function(){
 	}
 
   // Add smooth scrollling to hash links
-  $j('a').on('click', function(e){
+  $j('div.calendar-headers a').on('click', function(e){
   	var hash = this.hash;
   	if (hash !== "") {
 	  	e.preventDefault();
