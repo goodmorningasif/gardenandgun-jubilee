@@ -47,7 +47,7 @@ if(have_rows('feat_flexible', $page_ID)) :
       	'img' => get_sub_field('feat_cp-img_image'),
         'img_head' => get_sub_field('feat_cp-image-image-headline'),
         'img_cap' => get_sub_field('feat_cp-image-image-caption'),
-        'copy_icon' => file_get_contents($copy_icon['url']),
+        'copy_icon' => ($copy_icon ? file_get_contents($copy_icon['url']) : null),
         'copy_sect' => get_sub_field('feat_cp-img_sectional'),
         'copy_head' => get_sub_field('feat_cp-img_copy-headline'),
         'copy_para' => get_sub_field('feat_cp-img_para'),
