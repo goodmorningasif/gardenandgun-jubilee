@@ -48,7 +48,17 @@
   .image-wrapper
     > p
       margin-top: 15px
-   
+
+  .calendar
+    +flex
+
+    .day1, 
+    .day2,
+    .day3
+      flex: 0 0 30%
+
+      +medium
+        flex: 0 0 100%
 .grid-wrapper
   flex: 0 0 33.33%
   position: relative
@@ -260,6 +270,9 @@
       +medium
         font-size: 1rem
 
+    em
+      font-style: italic
+
 
   .grid-wrapper
     .overlay
@@ -302,6 +315,10 @@
         font-size: 0.7rem
 
 
+    em
+      font-style: italic
+
+
   .section-header
 
     h3,
@@ -317,17 +334,6 @@
       letter-spacing: 0.05em
 
   .calendar
-    +flex
-
-    .day1, 
-    .day2,
-    .day3
-      flex: 0 0 30%
-
-      +medium
-        flex: 0 0 100%
-
-
     .date
       h2
         +gentag($a: 1.5rem)
@@ -351,6 +357,13 @@
       > p 
         +gencopy($a: 1.1rem, $b: 1.8em)
 
+        a
+          color: $orange
+          transition: 0.4s color
+
+          &:hover
+            color: $black
+
 
       > a
         +genhead
@@ -361,6 +374,9 @@
         &:hover
           color: $black
           border-bottom-color: $white
+
+      em
+        font-style: italic
 
 .copy-image
   .image-wrapper

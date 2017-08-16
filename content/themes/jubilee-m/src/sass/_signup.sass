@@ -1,0 +1,80 @@
+ /* _404.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.signup
+  +width($c: 0 auto 100px)
+
+  h3
+    margin-bottom: 24px
+
+    +medium
+      max-width: 280px
+      margin: 10px auto
+
+  .form-signup
+    margin-top: 24px
+    margin-bottom: 24px
+
+    .form
+      display: block
+      margin: 0 auto 16px
+      width: 100%
+      height: 45px
+      max-width: 550px
+
+      +medium
+        max-width: 250px
+
+    #form-submit
+      height: 45px
+      width: 113px
+      padding-top: 6px
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.signup
+  text-align: center
+
+  h4
+    +genhead
+
+  h3
+    +gencopy
+    font-style: italic
+
+    +medium
+      font-size: 1rem
+  
+  .form-signup
+    .form
+      +genhead
+      color: $grey
+      border: 2px solid $grey
+      text-align: center
+
+      +placeholder
+        color: $grey
+
+    #form-submit
+      +genhead
+      background-color: $white
+      color: $orange
+      border: 2px solid $orange
+      transition: 0.4s color, 0.4s background-color
+
+      &:hover
+        border: 2px solid $grey
+        background-color: $grey
+        color: $white
+
+
+
+
+

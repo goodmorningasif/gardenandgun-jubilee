@@ -40,5 +40,12 @@ $j(document).ready(function(){
   	}
   });
 
+  // Handle form submit
+  $j('#form-submit').on('click', function(e){
+  	e.preventDefault();
+    var data = $j('#form-id-signup').serialize();
+    emmaAJAX(data, "#response");
+  });
+
 
 });
